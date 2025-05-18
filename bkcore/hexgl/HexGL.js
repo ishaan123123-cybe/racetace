@@ -216,9 +216,11 @@ bkcore.hexgl.HexGL.prototype.displayScore = function(f, l)
 	if(this.gameplay.result == this.gameplay.results.FINISH)
 	{
 		ds != undefined && (ds.innerHTML = "Finished!");
+		console.log("computergeekgames developer has started:",f)
 		// local record
 		if(typeof(Storage)!=="undefined")
 		{
+			console.log("computergeekgames developer initialized - game sending score can be done. Score ===", f);
 			if(localStorage['score-'+t+'-'+d] == undefined || localStorage['score-'+t+'-'+d] > f)
 			{
 				dr != undefined && (dr.innerHTML = "New local record!");
