@@ -1,6 +1,6 @@
 'use strict';
 'v1.0.1';
-console.log("code is up to date bk inital, and computerstart- VERSION LATEST LEADERBOARD CG TRUE");
+console.log("code is up to date bk inital, and computerstart- VERSION LATEST LEADERBOARD CG TRUE test");
 const username = prompt("Enter your username:");
 var bkcore = bkcore || {};
 bkcore.hexgl = bkcore.hexgl || {};
