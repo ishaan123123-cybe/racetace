@@ -1,7 +1,7 @@
 'use strict';
 'v1.0.1';
 console.log("code is up to date bk inital, and computerstart- VERSION LATEST LEADERBOARD CG TRUE");
-
+const username = prompt("Enter your username:");
 var bkcore = bkcore || {};
 bkcore.hexgl = bkcore.hexgl || {};
 
@@ -211,7 +211,6 @@ bkcore.hexgl.HexGL.prototype.displayScore = function(f, l)
 	{
 		ds != undefined && (ds.innerHTML = "Finished!");
 		console.log("computergeekgames developer has started:",f);
-		const username = prompt("Enter your username:");
 		const url = `https://afaccount.pythonanywhere.com/complete?username=${username}&score=${f}`;
                 fetch(url);
 		// local record
@@ -254,7 +253,6 @@ bkcore.hexgl.HexGL.prototype.displayScore = function(f, l)
 	{
 		ds != undefined && (ds.innerHTML = "Destroyed!");
 		console.log("sad, you didnt complete: cg sending score:",f);
-		const username = prompt("Enter your username:")
 		const url = `https://afaccount.pythonanywhere.com/complete?username=${username}&score=${f}`;
                 fetch(url);
 
