@@ -1,10 +1,3 @@
- /*
- * HexGL
- * @author Thibaut 'BKcore' Despoulain <http://bkcore.com>
- * @license This work is licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License.
- *          To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/3.0/.
- */
-
 'use strict';
 'v1.0.1';
 console.log("code is up to date bk inital, and computerstart");
@@ -257,6 +250,7 @@ bkcore.hexgl.HexGL.prototype.displayScore = function(f, l)
 	else
 	{
 		ds != undefined && (ds.innerHTML = "Destroyed!");
+		console.log("sad, you didnt complete: cg sending score:",f)
 		dr != undefined && (dr.innerHTML = "Maybe next time!");
 		dh != undefined && (dh.innerHTML = "Hall Of Fame");
 		dt != undefined && (dt.innerHTML = "None");
