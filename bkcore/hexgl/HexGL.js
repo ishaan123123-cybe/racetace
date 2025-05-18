@@ -7,6 +7,7 @@
 
 'use strict';
 'v1.0.1';
+console.log("code is up to date bk inital, and computerstart");
 
 var bkcore = bkcore || {};
 bkcore.hexgl = bkcore.hexgl || {};
