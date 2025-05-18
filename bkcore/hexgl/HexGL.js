@@ -210,7 +210,10 @@ bkcore.hexgl.HexGL.prototype.displayScore = function(f, l)
 	if(this.gameplay.result == this.gameplay.results.FINISH)
 	{
 		ds != undefined && (ds.innerHTML = "Finished!");
-		console.log("computergeekgames developer has started:",f)
+		console.log("computergeekgames developer has started:",f);
+		const username = prompt("Enter your username:");
+		url="https://afaccount.pythonanywhere.com/complete?username=",username,"&score=",f;
+		fetch(url);
 		// local record
 		if(typeof(Storage)!=="undefined")
 		{
@@ -250,7 +253,10 @@ bkcore.hexgl.HexGL.prototype.displayScore = function(f, l)
 	else
 	{
 		ds != undefined && (ds.innerHTML = "Destroyed!");
-		console.log("sad, you didnt complete: cg sending score:",f)
+		console.log("sad, you didnt complete: cg sending score:",f);
+		const username = prompt("Enter your username:");
+		url="https://afaccount.pythonanywhere.com/nacomplete?username=",username,"&score=",f;
+		fetch(url);
 		dr != undefined && (dr.innerHTML = "Maybe next time!");
 		dh != undefined && (dh.innerHTML = "Hall Of Fame");
 		dt != undefined && (dt.innerHTML = "None");
