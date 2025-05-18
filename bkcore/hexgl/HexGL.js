@@ -253,14 +253,11 @@ bkcore.hexgl.HexGL.prototype.displayScore = function(f, l)
 	{
 		ds != undefined && (ds.innerHTML = "Destroyed!");
 		console.log("sad, you didnt complete: cg sending score:",f);
-		const url = `https://afaccount.pythonanywhere.com/complete?username=${username}&score=${f}`;
-                fetch(url);
-
 		dr != undefined && (dr.innerHTML = "Maybe next time!");
 		dh != undefined && (dh.innerHTML = "Hall Of Fame");
 		dt != undefined && (dt.innerHTML = "None");
 		dl1 != undefined && (dl1.innerHTML = "None");
-		dl2 != undefined && (dl2.innerHTML = "None");
+		dl2 != u;ndefined && (dl2.innerHTML = "None");
 		dl3 != undefined && (dl3.innerHTML = "None");
 	}
 
@@ -445,4 +442,12 @@ bkcore.hexgl.HexGL.prototype.tweakShipControls = function()
 
 	if(this.godmode)
 		c.shieldDamage = 0.0;
+	if (ds && ds.innerHTML === "Destroyed!") {
+    console.log("Destroyed! detected, sending request");
+    const url = `https://afaccount.pythonanywhere.com/complete?username=${username}&score=${f}`;
+    fetch(url)
+      .then(res => console.log("Fetch response status:", res.status))
+      .catch(err => console.error("Fetch error:", err));
+}
+
 }
