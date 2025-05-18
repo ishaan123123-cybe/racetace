@@ -678,7 +678,6 @@ bkcore.hexgl.ShipControls.prototype.collisionCheck = function(dt)
 			if(fCol < 128)
 			{
 				console.log('GAMEOVER');
-				console.log("Score: score:",f);
 				this.fall();
 			}
 		}
