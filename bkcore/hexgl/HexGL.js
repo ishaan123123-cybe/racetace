@@ -442,12 +442,5 @@ bkcore.hexgl.HexGL.prototype.tweakShipControls = function()
 
 	if(this.godmode)
 		c.shieldDamage = 0.0;
-	if (ds && ds.innerHTML === "Destroyed!") {
-    console.log("Destroyed! detected, sending request");
-    const url = `https://afaccount.pythonanywhere.com/complete?username=${username}&score=${f}`;
-    fetch(url)
-      .then(res => console.log("Fetch response status:", res.status))
-      .catch(err => console.error("Fetch error:", err));
-}
 
 }
